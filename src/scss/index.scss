@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital@1&display=swap');
+@import "~normalize.css";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "promo";
+
+*{
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 , p {
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $body_bg;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+

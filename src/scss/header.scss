@@ -1,0 +1,62 @@
+@import "burger-menu";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $header_bg;
+  box-shadow: 0 12px 13px 2px rgba(255, 21, 66, 0.1);
+  &__wrapper {
+    min-height: 40px;
+    @include flexCenter(flex, space-between, center, row);
+  }
+  .logo {
+    font-family: $titles_ff, sans-serif;
+    font-weight: 700;
+  }
+  &__menu {
+    display: none;
+  }
+  &__list {
+    @include flexCenter(flex, space-between, center, row);
+    flex-shrink: 1;
+    li {
+      margin-right: 40px;
+    }
+    &__item {
+      color: #2d2829;
+      font-size: 13px;
+      text-transform: uppercase;
+      &:hover {
+        color: #f50049;
+      }
+    }
+  }
+  &__phone {
+    display: none;
+    font-size: 15px;
+    color: #2d2829;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 970px){
+  .header {
+    background-color: transparent;
+    box-shadow: none;
+    &__wrapper {
+      min-height: 80px;
+    }
+    &__menu{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width: 480px){
+  .header {
+    &__phone {
+      display: block;
+    }
+  }
+}

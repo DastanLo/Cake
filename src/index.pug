@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(href="favicon.ico")
+    title Cakes
+  body
+    header(class="header")
+      div(class="container header__wrapper")
+        div(class="hamburger-menu")
+          input(id="menu__toggle" type="checkbox")
+          label(class="menu__btn" for="menu__toggle")
+            span
+          ul(class="menu__box")
+            -const menu = ['Home', 'Gallery', 'Categories', 'Pages', 'My Account', 'My WishList', 'Login'];
+            -for (let i = 0; i < menu.length; i++)
+             li
+              a(class="menu__item" href="#")= menu[i]
+        div(class="logo") Cakes
+        nav(class="header__menu")
+          ul(class="header__list")
+            -const desktopMenu = ['Наши Торты', 'Индивидуальный заказ', 'Отзывы', 'О нас', 'Как заказать', 'Контакты'];
+            -for(let i = 0; i < desktopMenu.length; i++)
+              li
+                a(class="header__list__item" href="#")= desktopMenu[i]
+        div(class="header__phone") +7 906 899 92 96
+    section(class="promo-block")
+      div(class="promo-block__box container ")
+        div
+          h1 Торты
+            div на заказ
+        div
+          h5 Ручная работа
+        div
+          a(href="#") Выбрать Торт
+        div(class="promo-block__services")
+          div Натуральные ингредиенты
+          div Доставка бесплатно при заказе от 2000 рублей*
+
