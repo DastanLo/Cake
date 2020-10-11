@@ -31,11 +31,63 @@ html
         div
           h1 Торты
             div на заказ
-        div
           h5 Ручная работа
-        div
           a(href="#") Выбрать Торт
         div(class="promo-block__services")
           div Натуральные ингредиенты
-          div Доставка бесплатно при заказе от 2000 рублей*
-
+          div Доставка бесплатно при заказе от 2000 рублей
+    main(class="main container")
+      section(class="categories")
+        h4(class="categories__title") Наши Торты
+        div(class="categories__images")
+          a(href="#")
+            img(src=`assets/images/category-1.png` alt="categories")
+            h6 Классические
+              span 24 вида
+            span(class="arrow arrow-bg") Смотреть
+          a(href="#")
+            img(src=`assets/images/category-2.png` alt="categories")
+            h6 Муссовые
+              span 12 вида
+            span(class="arrow")
+          a(href="#")
+            img(src=`assets/images/category-3.png` alt="categories")
+            h6 Свадебные
+              span 24 вида
+            span(class="arrow")
+          a(href="#")
+            img(src=`assets/images/category-4.png` alt="categories")
+            h6 Мужчинам
+              span 24 вида
+            span(class="arrow")
+          a(href="#")
+            img(src=`assets/images/category-6.png` alt="categories")
+            h6 Детские
+              span 24 вида
+            span(class="arrow arrow-bg") Смотреть
+          a(href="#")
+            img(src=`assets/images/category-5.png` alt="categories")
+            h6 Женщинам
+              span 24 вида
+            span(class="arrow")
+      section(class="order-block")
+        h4(class="order-block__title") Индивидуальный заказ
+          span Соберите торт в 3 шага
+        div(class="order-block__items")
+          div(class="order-block__item")
+            h5 01
+              span Выберите начинку
+            div(class="swiper-container")
+              div(class="swiper-wrapper")
+                div(class="swiper-slide")
+                  div(class="order-block__image")
+                    img(src="assets/images/order-1.png" alt="order")
+                  div(class="order-block__description")
+                    h6 Шоколадный ганаш
+                    p "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                    span 1000 руб/кг
+                    a(href="#") Выбрать
+                div(class="swiper-slide") slide 2
+                div(class="swiper-slide") slide 3
+              div(class="swiper-button-next")
+              div(class="swiper-button-prev")

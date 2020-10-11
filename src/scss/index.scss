@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital@1&display=swap');
+@import '~swiper/swiper-bundle.min.css';
 @import "~normalize.css";
 @import "variables";
 @import "mixins";
 @import "header";
 @import "promo";
+@import "categories";
+@import "order-block";
 
 *{
   box-sizing: border-box;

@@ -1,4 +1,5 @@
 .promo-block {
+  margin-bottom: 2rem;
   background: url("../assets/images/cake-mobile-bg.png") no-repeat 50% -160px;
   &__box {
     font-family: "Playfair Display", sans-serif;
@@ -7,15 +8,19 @@
     @include flexCenter(flex, center, center, column);
     h1 {
       margin-top: 5rem;
+      margin-bottom: 1.9rem;
       font-weight: 700;
       font-size: 40px;
+      color: #2d2829;
     }
     h5 {
       font-size: 22px;
       font-style: oblique;
       color: #32313d;
+      margin-bottom: 2rem;
     }
     a {
+      margin-bottom: 2rem;
       display: block;
       background-color: #f50049;
       border-radius: 26px;
@@ -24,8 +29,72 @@
       color: $header_bg;
       text-transform: uppercase;
     }
-    & > div {
-      margin-bottom: 20px;
+  }
+  &__services {
+    display: flex;
+    flex-direction: column;
+    div {
+      text-align: left;
+      padding: 10px 0 10px 40px;
+    }
+    div:first-child {
+      margin-bottom: 15px;
+      background: url("../assets/images/flower-icon.png") 0 50% no-repeat;
+    }
+    div:last-child {
+      background: url("../assets/images/present-icon.png") 0 50% no-repeat;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .promo-block {
+    background-image: url("../assets/images/cake-midlle-bg.png");
+    background-position: 220% 50%;
+    &__box {
+      min-height: 700px;
+      justify-content: space-around;
+      align-items: flex-start;
+      h1 {
+        margin-top: 0;
+        font-size: 60px;
+      }
+      h5 {
+        font-size: 36px;
+        margin-bottom: 3rem;
+      }
+      a {
+        margin-bottom: 0;
+      }
+    }
+    &__services {
+      flex-direction: row;
+      align-items: center;
+      div {
+        margin: 0 !important;
+        max-width: 250px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 900px){
+  .promo-block {
+    background-image: url("../assets/images/cake-lg-bg.png");
+    background-position: 300px 0;
+    background-size: 90%;
+    &__box {
+      min-height: 950px;
+      justify-content: start;
+      h1 {
+        margin-top: 5rem;
+        font-size: 78px;
+      }
+      h5{
+        font-size: 41px;
+      }
+      a {
+        margin-bottom: 5rem;
+      }
     }
   }
 }
