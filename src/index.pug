@@ -14,7 +14,7 @@ html
           label(class="menu__btn" for="menu__toggle")
             span
           ul(class="menu__box")
-            -const menu = ['Home', 'Gallery', 'Categories', 'Pages', 'My Account', 'My WishList', 'Login'];
+            -const menu = ['Наши Торты', 'Индивидуальный заказ', 'Отзывы', 'О нас', 'Как заказать', 'Контакты'];
             -for (let i = 0; i < menu.length; i++)
              li
               a(class="menu__item" href="#")= menu[i]
@@ -85,10 +85,16 @@ html
                   div(class="order-block__description")
                     h6 Шоколадный ганаш
                     p "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
-                    span 1000 руб/кг
+                    span 500 руб/кг
                     a(href="#") Выбрать
-                div(class="swiper-slide") slide 2
-                div(class="swiper-slide") slide 3
+                div(class="swiper-slide")
+                  div(class="order-block__image")
+                    img(src="assets/images/order-1.png" alt="order")
+                  div(class="order-block__description")
+                    h6 Молочный ликер
+                    p "Ароматный молочный, густой молочный крем – самый молочный из всех возможных десертов!"
+                    span 300 руб/кг
+                    a(href="#") Выбрать
               div(class="swiper-pagination")
               div(class="swiper-button-next")
               div(class="swiper-button-prev")
@@ -101,29 +107,29 @@ html
                   div(class="order-block__image")
                     img(src="assets/images/circle-1.png" alt="order")
                   div(class="order-block__description")
-                    p(class="circle_text") 17-18 см
-                      i (1 кг – 6 персон)
+                    p(class="circle_text") 10-14 см
+                      i (2 кг – 3 персон)
                     a(class="circle-btn" href="#") Выбрать
                 div(class="swiper-slide circle-slide")
                   div(class="order-block__image")
                     img(src="assets/images/circle-2.png" alt="order")
                   div(class="order-block__description")
-                    p(class="circle_text") 17-18 см
-                      i (1 кг – 6 персон)
+                    p(class="circle_text") 8-12 см
+                      i (3 кг – 8 персон)
                     a(class="circle-btn" href="#") Выбрать
                 div(class="swiper-slide circle-slide")
                   div(class="order-block__image")
                     img(src="assets/images/circle-3.png" alt="order")
                   div(class="order-block__description")
-                    p(class="circle_text") 17-18 см
-                      i (1 кг – 6 персон)
+                    p(class="circle_text") 12-14 см
+                      i (4 кг – 9 персон)
                     a(class="circle-btn" href="#") Выбрать
                 div(class="swiper-slide circle-slide")
                   div(class="order-block__image")
                     img(src="assets/images/circle-4.png" alt="order")
                   div(class="order-block__description")
-                    p(class="circle_text") 17-18 см
-                      i (1 кг – 6 персон)
+                    p(class="circle_text") 14-22 см
+                      i (2 кг – 9 персон)
                     a(class="circle-btn" href="#") Выбрать
               div(class="swiper-pagination circle-pagination")
               div(class="swiper-button-next circle-arrow")
@@ -138,14 +144,28 @@ html
                     img(src="assets/images/view-1.png" alt="order")
                   div(class="order-block__description")
                     p(class="circle_text choice") 17-18 см
-                      i (1 кг – 6 персон)
+                      i (1 кг – 10 персон)
                     a(class="circle-btn" href="#") Выбрать
                 div(class="swiper-slide circle-slide choice-slide")
                   div(class="order-block__image")
                     img(src="assets/images/view-2.png" alt="order")
                   div(class="order-block__description")
                     p(class="circle_text choice") 17-18 см
-                      i (1 кг – 6 персон)
+                      i (1 кг – 8 персон)
+                    a(class="circle-btn" href="#") Выбрать
+                div(class="swiper-slide circle-slide choice-slide")
+                  div(class="order-block__image")
+                    img(src="assets/images/view-1.png" alt="order")
+                  div(class="order-block__description")
+                    p(class="circle_text choice") 17-18 см
+                      i (1 кг – 4 персон)
+                    a(class="circle-btn" href="#") Выбрать
+                div(class="swiper-slide circle-slide choice-slide")
+                  div(class="order-block__image")
+                    img(src="assets/images/view-1.png" alt="order")
+                  div(class="order-block__description")
+                    p(class="circle_text choice") 17-18 см
+                      i (1 кг – 12 персон)
                     a(class="circle-btn" href="#") Выбрать
               div(class="order-block__choice")
                 h4 Ваш выбор
@@ -153,11 +173,11 @@ html
                   h6 Начинка
                   input(value="Шоколадный ганаш")
                 div
-                  h6 Начинка
-                  input(value="Шоколадный ганаш")
+                  h6 Размер
+                  input(value="Молочный Пениш")
                 div
-                  h6 Начинка
-                  input(value="Шоколадный ганаш")
+                  h6 Оформление
+                  input(value="Красный маниш")
                 div
                   a(href="#") заказать торт
               div(class="swiper-pagination choice-pagination")
@@ -179,6 +199,15 @@ html
                       | Гости были в восторге! Отдельное спасибо
                       | за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)"
               div(class="swiper-slide")
+                div(class="reviews__block")
+                  div(class="reviews__avatar")
+                    img(src="assets/images/review-avatar.png")
+                  div(class="reviews__text")
+                    h6 Юля
+                      span архитектор, 22 года
+                    p "Заказывала торт брауни на юбилей мужа.
+                      | Гости были в восторге! Отдельное спасибо
+                      | за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)"
             div(class="swiper-pagination")
             div(class="swiper-button-next")
             div(class="swiper-button-prev")
@@ -197,7 +226,7 @@ html
             h6 Кондитер – как призвание
             p "
               | Павел — профессиональный повар в
-              | различных гастрономических областях, но однажды его сердце покорило кондитерское искусство.
+              | различных гастрономических областях, но однажды его сердце покорило кондитерское искусство.
               | С ранних лет он увлекался утонченным мастерством и обратился к своим талантам
               | как кондитер. "
             h6 Принцип – натуральные ингредиенты
@@ -220,19 +249,74 @@ html
             div
               h4 Без искусственных добавок
               p "Работаем  с натуральными ингредиентами
-                | и свежими продуктами
-                | "
+                | и свежими продуктами"
           div(class="item")
             div
               img(src="assets/images/advantage-icon-2.png" alt="icons")
             div
-              h4 Без искусственных добавок
-              p "Работаем  с натуральными ингредиентами
-                | и свежими продуктами
-                | "
+              h4 Свежий торт в день торжества
+              p "Торты изготавливаются в течение
+                | суток до отправки"
         div(class="advantages__text")
           h3 Забота о клиентах
           h6 Для нас важно
           p "Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был создан исключительно
             | для вас и для вашего события."
-
+    section(class="delivery")
+      div(class="delivery__instructions container")
+        h3 Как заказать
+        div
+          span 1
+          div(class="description")
+            h5 Срок заказа
+            p "Размещать заказы желательно за
+              | 2-3 дня. На выходные заказы лучше размещать минимум за неделю. "
+        div
+          span 2
+          div(class="description")
+            h5 Доставка по городу
+            p "
+              | Доставка в пределах города 200 рублей , при заказе на сумму более 2000  доставка бесплатно.
+              | "
+        div
+          span 3
+          div(class="description")
+            h5 Доставка за городом
+            p "Доставка за пределами города рассчитывается
+              | индивидуально."
+    section(class="contacts")
+      div(class="container")
+        div(class="contacts__items")
+          div(class="item")
+            h5 Контакты
+            h6 Остались вопросы?
+            p "Заполните форму ниже и наш кондитер
+              | свяжется с Вами"
+            form
+              input(placeholder="Ваше имя")
+              input(placeholder="Email адрес")
+              textarea(placeholder="Ваш вопрос")
+              button Отправить
+          div(class="item")
+            span Или позвоните по телефону:
+              i +7 906 899 92 96
+            span Наша почта : bakerybypavel@mail.ru
+            span Мы в соц. сетях:
+            div(class="social-links")
+              a(href="#")
+              a(href="#")
+    footer(class="footer")
+      div(class="container")
+        div(class="footer__wrapper")
+          div(class="logo") Cake
+          nav
+            ul(class="footer__list")
+              -const desktop = ['Наши Торты', 'Индивидуальный заказ', 'Отзывы', 'О нас', 'Как заказать', 'Контакты', '+7 906 899 92 96'];
+              -for (let i = 0; i < desktop.length; i++)
+                li
+                  a(href="#" class="menu__items")= desktop[i]
+          div(class="footer__socials")
+            a(href="#")
+            a(href="#")
+        hr
+        span ©  2018 Cakes

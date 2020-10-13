@@ -63,6 +63,7 @@
 }
 
 .menu__box {
+  font-family: $titles_ff;
   display: block;
   position: fixed;
   visibility: hidden;
@@ -73,7 +74,7 @@
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: #ECEFF1;
+  background-color: $body_bg;
   box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
   transition-duration: .25s;
 }
@@ -84,7 +85,7 @@
   color: #333;
   font-style: italic;
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   transition-duration: .25s;
