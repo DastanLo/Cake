@@ -1,0 +1,109 @@
+.advantages {
+  background: url("../assets/images/advantage-bg.png") no-repeat -76px 564px;
+  background-size: 100%;
+  padding-bottom: 8rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-family: $titles_ff;
+  h3 {
+    color: #2d2829;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+  h6 {
+    color: #32313d;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 10px 0;
+    color: #000000;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .items {
+      margin: 0 -15px;
+      padding-top: 15px;
+      background-color: $header_bg;
+      display: flex;
+      flex-direction: column;
+      .item {
+        margin-bottom: 20px;
+        & > div {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 435px){
+  .advantages {
+    &__list {
+      .items {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .advantages {
+    min-height: 700px;
+    background-position: 50% 60px;
+    h6 {
+      margin-bottom: 3rem;
+    }
+    &__list {
+      justify-content: space-between;
+      .items {
+        margin-bottom: 8rem;
+        max-width: 436px;
+        align-self: flex-end;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        .item {
+          text-align: left;
+          display: flex;
+          align-items: center;
+          margin-bottom: 0;
+          div:nth-child(2) {
+            margin-left: 20px;
+            max-width: 430px;
+          }
+          &:nth-child(1) {
+            div:nth-child(2) {
+              margin-left: 42px;
+            }
+          }
+        }
+      }
+    }
+    &__text {
+      max-width: 436px;
+      align-self: flex-start;
+      h6 {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .advantages {
+    &__list {
+      .items {
+        margin-right: 5rem;
+        margin-bottom: 15rem;
+      }
+    }
+  }
+}

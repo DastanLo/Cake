@@ -1,11 +1,38 @@
 .order-block {
   margin-top: 3rem;
   font-family: $titles_ff;
-  .swiper-container {
+  .swiper-container, .circle-container, .choice-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
+    .choice-slide {
+      position: relative;
+      img {
+        box-shadow: 0 5px 13px 1px rgba(163, 6, 60, 0.1);
+      }
+    }
     .swiper-button-next, .swiper-button-prev {
       top: 30% !important;
+      display: none;
+    }
+    .swiper-pagination {
+      bottom: 208px;
+    }
+    .circle-pagination {
+      bottom: 38% !important;
+    }
+    .choice-pagination {
+      bottom: 60% !important;
+    }
+    .circle-wrapper{
+      display: flex;
+      align-items: flex-end;
     }
   }
   &__title {
@@ -23,7 +50,12 @@
       font-weight: 300;
     }
   }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
   &__item {
+    margin-bottom: 30px;
     padding: 20px;
     background-color: $header_bg;
     min-height: 430px;
@@ -72,8 +104,17 @@
       font-weight: 700;
       margin: 10px 0;
     }
+    .circle_text {
+      margin-top: 30px;
+    }
     p {
+      text-align: center;
       font-size: 14px;
+      i {
+        margin-top: 5px;
+        margin-bottom: 30px;
+        display: block;
+      }
     }
     span {
       font-weight: 700;
@@ -88,23 +129,147 @@
       padding: 21px 62px;
     }
   }
+  &__choice {
+    font-family: $titles_ff;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2d2829;
+    }
+    & > div {
+      text-align: center;
+      margin-top: 20px;
+      h6 {
+        color: #f50049;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      input {
+        border-radius: 15px;
+        border: 1px solid #dddddd;
+        padding: 10px 10px 10px 20px;
+      }
+      a {
+        display: block;
+        border-radius: 26px;
+        background-color: #f50049;
+        padding: 10px 50px;
+        color: $header_bg;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 340px){
+  .order-block {
+    .swiper-container, .circle-container, .choice-container {
+      .swiper-pagination {
+        bottom: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 450px){
+  .order-block {
+    .swiper-container, .circle-container, .choice-container {
+      .swiper-pagination {
+        bottom: 190px;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px){
   .order-block {
+    .swiper-container, .circle-container, .choice-container {
+      .circle-slide {
+        flex-direction: column !important;
+        padding: 0 !important;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        top: 40% !important;
+      }
+      .circle-arrow {
+        display: none !important;
+      }
+      .circle-btn {
+        display: none !important;
+      }
+      .swiper-pagination {
+        display: none;
+      }
+      .swiper-slide {
+        padding: 0 70px;
+        flex-direction: row;
+      }
+    }
     &__item {
-      //align-items: center;
-      //flex-direction: row;
       h5 {
         align-self: flex-start;
       }
     }
-    .swiper-slide {
-      padding: 0 70px;
-      flex-direction: row;
-    }
     &__image {
       margin-right: 20px;
+    }
+    &__description {
+      h6 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 18px;
+      }
+      span {
+        font-size: 22px;
+      }
+      a {
+        font-size: 13px;
+      }
+    }
+    .choice {
+      position: absolute;
+      bottom: 20px;
+      left: calc(40% - 30px);
+    }
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .order-block {
+    &__item {
+      h5 {
+        flex-direction: column;
+        font-size: 64px;
+        span {
+          font-size: 27px;
+        }
+      }
+    }
+    &__choice {
+      justify-content: center;
+      flex-direction: row;
+      align-items: flex-end;
+      h4 {
+        display: none;
+      }
+      & > div {
+        margin-right: 10px;
+        input {
+          border: none;
+          border-bottom: 1px solid #dddddd;
+          border-radius: 0;
+          padding-bottom: 4px;
+        }
+      }
     }
   }
 }
